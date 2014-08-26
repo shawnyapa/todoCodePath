@@ -4,12 +4,14 @@
     android:layout_height="match_parent"
     tools:context=".HelloWorldActivity" >
 
-    <TextView
+    <Button
+        android:id="@+id/addTask"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
         android:layout_centerHorizontal="true"
-        android:layout_centerVertical="true"
-        android:text="@string/hello_world"
-        android:textSize="25sp" />
+        android:layout_marginBottom="14dp"
+        android:onClick="addActivity"
+        android:text="@string/addTask" />
 
 </RelativeLayout>

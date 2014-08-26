@@ -4,5 +4,13 @@
     <string name="app_name">HelloWorldDemo</string>
     <string name="hello_world">Hello world!</string>
     <string name="menu_settings">Settings</string>
+    <string name="add_button">Add</string>
+    <string name="txt_field_add_task">Task Name</string>
+    <string name="tempText">Temporary Text</string>
+    <string name="addTask">Add Task</string>
+    <string name="add_screen">Add Screen</string>
+    <string name="updateTask">Update Task</string>
+    <string name="editScreen">Edit Screen</string>
+    <string name="completed">Completed</string>
 
 </resources>

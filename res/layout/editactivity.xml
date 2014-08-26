@@ -1,0 +1,47 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".HelloWorldActivity" >
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="116dp"
+        android:text="@string/editScreen"
+        android:textAppearance="?android:attr/textAppearanceLarge" />
+
+    <EditText
+        android:id="@+id/txtfldEdit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/textView1"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="38dp"
+        android:ems="10"
+        android:hint="@string/txt_field_add_task" />
+
+    <CheckBox
+        android:id="@+id/chkCompleted"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/txtfldEdit"
+        android:layout_below="@+id/txtfldEdit"
+        android:layout_marginTop="28dp"
+        android:text="@string/completed" />
+
+    <Button
+        android:id="@+id/edtTask"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/chkCompleted"
+        android:layout_alignBottom="@+id/chkCompleted"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="14dp"
+        android:onClick="editTask"
+        android:text="@string/updateTask" />
+
+</RelativeLayout>
