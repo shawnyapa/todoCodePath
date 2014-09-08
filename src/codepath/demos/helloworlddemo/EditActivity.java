@@ -5,14 +5,18 @@ import android.app.Activity;
 import android.view.Menu;
 import android.view.View;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.content.Intent;
 import android.widget.CheckBox;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.TimeZone;
 
 public class EditActivity extends Activity {
 	public EditText	txtfldEdit;
 	public CheckBox chkCompleted;
+	public TextView completedDate;
 	int position;
-	Boolean status = false;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,12 +24,22 @@ public class EditActivity extends Activity {
 		setContentView(R.layout.editactivity);
 		txtfldEdit = (EditText) findViewById(R.id.txtfldEdit);
 		chkCompleted = (CheckBox) findViewById(R.id.chkCompleted);
+		completedDate = (TextView) findViewById(R.id.completeddatetxtView);
 		Bundle bundle = getIntent().getExtras();
 		position = bundle.getInt("position");
 		String taskName = bundle.getString("taskName");
-		status = bundle.getBoolean("status");
+		String status = bundle.getString("status");
+		int donedate = bundle.getInt("donedate");
+		if (donedate != 0)
+		{
+		Date date = new Date(donedate*1000L); // *1000 seconds conversion
+		SimpleDateFormat sdf = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss z"); // Date Format
+		sdf.setTimeZone(TimeZone.getTimeZone("GMT-7"));
+		String formattedDate = sdf.format(date);
+		completedDate.setText(formattedDate);
+		}
 		txtfldEdit.setText(taskName);
-		if (status) {
+		if (status.equals("Completed")) {
 			chkCompleted.setChecked(true);
 		}
 			else {
@@ -44,19 +58,19 @@ public class EditActivity extends Activity {
 		// Get the Task Name
 		EditText task_name = (EditText) findViewById(R.id.txtfldEdit);
 		String taskName = task_name.getText().toString();
+		String status;
 		if (chkCompleted.isChecked()) {
-			status = true;
+			status = "Completed";
 		}
 		else {
-			status = false;
+			status = "Incomplete";
 		}
 		// Set the Data to Pass Back
 		Bundle extras = new Bundle();
         extras.putString("taskName", taskName);
         extras.putInt("position", position);
-        extras.putBoolean("status", status);
+        extras.putString("status", status);
         data.putExtras(extras);
-		//data.setData(Uri.parse(task_name.getText().toString()));
 		setResult(RESULT_OK, data);
 		//Close the Activity, it's job is done.
 		finish();	
