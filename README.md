@@ -23,4 +23,4 @@ There are a number of items that are definitely not best practice but do functio
 
 ***NOTE: I put the Add Task Button into the Action Bar***
 
-<img src="http://imgur.com/WwlvYah" title="Hosted by imgur.com"/>
+<img src="http://i.imgur.com/WwlvYah.gif" title="Hosted by imgur.com"/>
