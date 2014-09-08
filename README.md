@@ -1,7 +1,7 @@
 todo CodePath
 ===================
 
-ToDo Android App
+ToDo Android App v2 (Updated Feature Extensions)
 
 This is an Android Demo project for Pre-BootCamp CodePath work.
 
@@ -12,7 +12,10 @@ Completed User Stories:
  - Edit To Do Tasks (Required)
  - List To Do Tasks (Required)
  - Update and display To Do Task Status (Not Required)
- - Data Persistence (Required) - Coded but not functional
+ - Data Persistence (Required
+ - SQLite Data Persistence (New Extension)
+ - DateStamp for Completed Tasks (New Extension)
+ - New Task Class
 
 This turned out to be a fun project.
 But I have to turn it in before midnight today without code cleanup.
@@ -20,4 +23,4 @@ There are a number of items that are definitely not best practice but do functio
 
 ***NOTE: I put the Add Task Button into the Action Bar***
 
-<img src="http://i.imgur.com/yM5nLED.gif" title="Hosted by imgur.com"/>
+<img src="http://imgur.com/WwlvYah" title="Hosted by imgur.com"/>
